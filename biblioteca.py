@@ -34,7 +34,7 @@ def biblio():
                 if sgr == "si":
                     if brar.isdigit():
                         brar = int(brar)
-                        if 0<=brar<=len(libros):
+                        if 0<=brar<len(libros):
                             libros.pop(brar)
                         else:
                             print("Esa posicion no existe ")

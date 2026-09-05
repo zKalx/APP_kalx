@@ -75,7 +75,7 @@ def execute_generator():
                         ncontra += ltr
                     print(f"La contraseña generada es: {ncontra}")
                 if opci.isdigit():
-                    opci == int(opci)
+                    opci = int(opci)
                     if 0<=opci<=14:
                         if opci == 0:
                             algoritmo()
