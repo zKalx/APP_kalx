@@ -2,6 +2,7 @@ import os
 import random
 from itertools import cycle
 import time
+
 def execute_generator():
     cant_caracteres = int()
 
