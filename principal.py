@@ -18,6 +18,7 @@ while True:
         """)
         xyz = input("Introduzca la opcion que desee: ")
         if xyz.isdigit():
+            xyz = int(xyz)
             if xyz == 1:
                 borrar()
                 execute_encriptador()
