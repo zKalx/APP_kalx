@@ -44,67 +44,72 @@ def execute_generator():
     borrar()
     while True:
         print("[1] Generar contraseña \n[2] Salir")
-        opc = int(input("Escoge una opcion: "))
-        if opc == 1:
-            borrar()
-            print("""
-        [0] mayus
-        [1] minus
-        [2] simbolos
-        [3] numeros,
-        [4] mayus + minus
-        [5] mayus + simbolos
-        [6] mayus + numeros
-        [7] minus + simbolos
-        [8] minus + numeros
-        [9] simbolos + numeros,
-        [10] mayus + minus + simbolos
-        [11] mayus + minus + numeros
-        [12] mayus + simbolos + numeros
-        [13] minus + simbolos + numeros
-        [14] mayus + minus + simbolos + numeros""")
-            opci = int(input("Introduce la opcion que deesees"))
-            def algoritmo():
+        opc = input("Escoge una opcion: ")
+        if opc.isdigit():
+            opc = int(opc)
+            if opc == 1:
                 borrar()
-                ncontra = ""
-                cant_caracteres = int(input("Elige el numero de caracteres para tu contraseña. "))
-                for i in range(cant_caracteres):
-                    ltr = random.choice(comb[opci])
-                    ncontra += ltr
-                print(f"La contraseña generada es: {ncontra}")
-            if opci == 0:
-                algoritmo()
-            elif opci == 1:
-                algoritmo()
-            elif opci ==2:
-                algoritmo()
-            elif opci ==3:
-                algoritmo()
-            elif opci ==4:
-                algoritmo()
-            elif opci==5:
-                algoritmo()
-            elif opci==6:
-                algoritmo()
-            elif opci == 7:
-                algoritmo()
-            elif opci == 8:
-                algoritmo()
-            elif opci == 9:
-                algoritmo()
-            elif opci == 10:
-                algoritmo()
-            elif opci == 11:
-                algoritmo()
-            elif opci == 12:
-                algoritmo()
-            elif opci == 13:
-                algoritmo()
-            elif opci==14:
-                algoritmo()
-            else:
-                print("Introduce una opcion correcta! ")
-        elif opc == 2:
-            break
-        else:
-            print("Introduce una opcion valida porfavor")
+                print("""
+            [0] mayus
+            [1] minus
+            [2] simbolos
+            [3] numeros,
+            [4] mayus + minus
+            [5] mayus + simbolos
+            [6] mayus + numeros
+            [7] minus + simbolos
+            [8] minus + numeros
+            [9] simbolos + numeros,
+            [10] mayus + minus + simbolos
+            [11] mayus + minus + numeros
+            [12] mayus + simbolos + numeros
+            [13] minus + simbolos + numeros
+            [14] mayus + minus + simbolos + numeros""")
+                opci = input("Introduce la opcion que deesees")
+                def algoritmo():
+                    borrar()
+                    ncontra = ""
+                    cant_caracteres = int(input("Elige el numero de caracteres para tu contraseña. "))
+                    for i in range(cant_caracteres):
+                        ltr = random.choice(comb[opci])
+                        ncontra += ltr
+                    print(f"La contraseña generada es: {ncontra}")
+                if opci.isdigit():
+                    opci == int(opci)
+                    if 0<=opci<=14:
+                        if opci == 0:
+                            algoritmo()
+                        elif opci == 1:
+                            algoritmo()
+                        elif opci ==2:
+                            algoritmo()
+                        elif opci ==3:
+                            algoritmo()
+                        elif opci ==4:
+                            algoritmo()
+                        elif opci==5:
+                            algoritmo()
+                        elif opci==6:
+                            algoritmo()
+                        elif opci == 7:
+                            algoritmo()
+                        elif opci == 8:
+                            algoritmo()
+                        elif opci == 9:
+                            algoritmo()
+                        elif opci == 10:
+                            algoritmo()
+                        elif opci == 11:
+                            algoritmo()
+                        elif opci == 12:
+                            algoritmo()
+                        elif opci == 13:
+                            algoritmo()
+                        elif opci==14:
+                            algoritmo()
+                        else:
+                            print("Introduce una opcion correcta! ")
+                    elif opc == 2:
+                        break
+                    else:
+                        print("Introduce una opcion valida porfavor")

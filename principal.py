@@ -4,6 +4,7 @@ from itertools import cycle
 import time
 from generador import execute_generator
 from encriptador import execute_encriptador
+from biblioteca import biblio
 def borrar():
     os.system("cls"if os.name=="nt"else"clear")
 while True:
@@ -12,18 +13,23 @@ while True:
         Opciones:
         [1] Encriptador de texto
         [2] Generador de contraseñas
-        [3] Salir
+        [3] Biblioteca
+        [4] Salir
         """)
-        xyz = int(input("Introduzca la opcion que desee: "))
-        if xyz == 1:
-            borrar()
-            execute_encriptador()
-        if xyz==2:
-            borrar()
-            execute_generator()
-        if xyz==3:
-            borrar()
-            break
-        else:
-            borrar()
-            print("Introduzca una opcion valida")
+        xyz = input("Introduzca la opcion que desee: ")
+        if xyz.isdigit():
+            if xyz == 1:
+                borrar()
+                execute_encriptador()
+            elif xyz==2:
+                borrar()
+                execute_generator()
+            elif xyz==3:
+                borrar()
+                biblio()
+            elif xyz==4:
+                borrar()
+                break
+            else:
+                borrar()
+                print("Introduzca una opcion valida")
